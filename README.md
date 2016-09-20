@@ -1,2 +1,2 @@
-# theEulerProject
-Collection of Problems from The Euler Project
+# projectEuler
+Collection of Problems from Project Euler
