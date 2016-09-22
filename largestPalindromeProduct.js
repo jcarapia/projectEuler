@@ -5,7 +5,7 @@
 
 function largestPalindromeProduct(){
 	var palindromes = [];
-	for(var i = 999999; i >= 100000; i--){
+	for(var i = 998001; i >= 100000; i--){
 		var string = i.toString();
 		if(string[0] === string[5]){
 			if(string[1] === string[4]){
@@ -15,20 +15,24 @@ function largestPalindromeProduct(){
 			}
 		}
 	}
+	//console.log(palindromes)
 	return palindromes;
 };
 
 function checkIfDivisibleBy3(){
 	var palindromes = largestPalindromeProduct();
+	//console.log(palindromes)
 
 	var lastIndex = palindromes.length - 1;
 
-	for(var i = lastIndex; i >= 0; i--){
+	for(var i = 0; i <= lastIndex; i++){
 
 		for(var j = 999; j >= 100; j--){
 
 			if(palindromes[i] % j === 0){
-				return (palindromes[i], j)
+				if(palindromes[i] / j <= 999){
+					return palindromes[i];
+				}
 			}
 
 		}
