@@ -70,8 +70,23 @@ function eratosthenes(limit) {
  
 var primes = eratosthenes(100000000);
 
-console.log(primes[primes.length-1])
+//console.log(primes[primes.length-1])
 //console.log(primeChecker(600851475143))
 //console.log(largestPrimeFactor(10000000))
 //console.log(primesArray(10000000))
+
+function factors(){
+	var results = null;
+	for(var i = 3; i <= 300425737572; i++){
+		if(600851475143 % i === 0){
+			results = i
+		}
+	}
+	return results;
+}
+
+console.log(factors());
+
+
+
 
